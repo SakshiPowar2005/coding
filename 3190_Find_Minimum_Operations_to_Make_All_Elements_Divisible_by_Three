@@ -1,0 +1,24 @@
+class Solution {
+    public int minimumOperations(int[] nums) {
+        
+        int n = nums.length;
+        int operations = 0;
+
+        for(int i = 0;i < n;i++)
+        {
+            if(nums[i] % 3 == 1) //for(1,4..)
+            {
+                nums[i] = nums[i] - 1;
+                operations++;
+            }
+            else if(nums[i] % 3 == 2) //for(2,5..)
+            {
+                nums[i] = nums[i] + 1;
+                operations++;
+            }
+        }
+
+
+        return operations;
+    }
+}
